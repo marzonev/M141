@@ -86,7 +86,30 @@ Dient zur Verwaltung von Zugriffsrechten in der Datenbank.
 ```sql
 GRANT SELECT ON Kunden TO Benutzer1;
 REVOKE SELECT ON Kunden FROM Benutzer1;
+
+REVOKE privileg1 [, privileg2, ...]
+ON [datenbank.]tabelle
+FROM user@host ;
 ```
+
+**Begriffe**   
+
+| PRIVILEG              | Berechtigung auf eine DB, Tabelle oder Spalte  |
+|:--------------------|:-----|
+| **Globales** Privileg | Berechtigung für alle DB, Tabellen und Spalten |
+| **SELECT**-Privileg   | Benutzer darf Daten lesen                      |
+| **UPDATE**-Privileg   | Benutzer darf Daten ändern                     |
+| **GRANT**-Privileg    | Benutzer darf Zugriffsrechte festlegen u. Benutzer erstellen    |
+| **FILE**-Privileg \*  | Werden benötigt, um eine Reihe von Datei-Befehlen auszuführen: `LOAD FILE ()`, `LOAD DATA INFILE …`   |
+| **All**               | Alle Privilegien (ausser GRANT OPTION)        |
+| **Usage**             | keine Privilegien (nur Connect auf den Server)  |
+
+| Privilegien               |                                                         |
+|---------------------------|---------------------------------------------------------|
+| **ON** \*.\*              | globale Privilegien (alle DB mit allen Tabellen)        |
+| **ON** db.\*              | DB-Privilegien (alle Tabellen der DB)                   |
+| **ON** db.tb              | Tabellen-Privilegien (alle Spalten der Tabelle)         |
+| (att1, att2) **ON** db.tb | Spalten-Privilegien (Spalten att1 und att2 der Tabelle) |
 
 ---
 
