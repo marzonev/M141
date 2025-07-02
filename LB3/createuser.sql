@@ -37,3 +37,5 @@ GRANT USAGE ON backpacker_lb3.* TO 'Gabriel'@'%';
 GRANT USAGE ON backpacker_lb3.* TO 'Nevio'@'%';
 GRANT Benutzer TO 'Gabriel'@'%';
 GRANT Management TO 'Nevio'@'%';
+SET DEFAULT ROLE 'Benutzer' TO 'Gabriel'@'%';
+SET DEFAULT ROLE 'Management' TO 'Nevio'@'%';
