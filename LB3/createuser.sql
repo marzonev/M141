@@ -33,5 +33,7 @@ CREATE USER 'Gabriel'@'%' IDENTIFIED BY 'Gabriel';
 CREATE USER 'Nevio'@'%' IDENTIFIED BY 'Nevio';
 
 -- Rolle zuweisen
+GRANT USAGE ON backpacker_lb3.* TO 'Gabriel'@'%';
+GRANT USAGE ON backpacker_lb3.* TO 'Nevio'@'%';
 GRANT Benutzer TO 'Gabriel'@'%';
 GRANT Management TO 'Nevio'@'%';
