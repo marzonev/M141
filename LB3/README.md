@@ -101,7 +101,7 @@ GROUP BY p.Personen_ID;
 
 * SQL-Dump [Datanbankstruktur_neu](Datenbankstruktur_neu.sql)
 * CSV-Dateien (bereinigt): [csvs](csvs)
-* IP zu Cloud-Datenbank: **Wichtig einfügen**
+* IP zu Cloud-Datenbank: 44.193.145.98
 
 ---
 
